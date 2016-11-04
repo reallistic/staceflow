@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive test/ ",
-    "testAndReport": "mocha --compilers js:babel-core/register --recursive --reporter xunit test/ > test-reports.xml ",
+    "testAndReport": "mocha --compilers js:babel-core/register --recursive --reporter  mocha-junit-reporter test/",
     "testAndCover": "mocha --compilers js:babel-core/register --recursive --reporter xunit test/ > test-reports.xml && istanbul cover node_modules/mocha/bin/_mocha -- --recursive"
   },
   "author": "Michael Chase <reallistic@rosekings.com>",

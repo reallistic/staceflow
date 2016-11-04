@@ -1,0 +1,9 @@
+machine:
+    timezone:
+        America/Los_Angeles
+test:
+    override:
+        - npm run testAndReport:
+          environment:
+            MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
+
