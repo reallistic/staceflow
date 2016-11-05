@@ -2,7 +2,7 @@
 
 import assert from 'assert';
 import sinon from 'sinon';
-import Flow from '../flow';
+import Flow from '../src/flow';
 
 describe('flow class', () => {
   describe('__gotoNextStep', () => {
