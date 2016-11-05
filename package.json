@@ -2,7 +2,7 @@
   "name": "StaceFlow",
   "version": "0.0.4",
   "description": "Stace is a flow control library to help facilitate sequential promise/function execution",
-  "main": "/lib/index.js",
+  "main": "lib/index.js",
   "repository": {
     "url": "https://github.com/reallistic/staceflow.git",
     "type": "git"
