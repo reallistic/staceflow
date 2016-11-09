@@ -42,7 +42,7 @@ export default class Base extends EventEmitter {
   }
 
   __handleError(step, error) {
-    this.setState({'error': e});
+    this.setState({'error': error});
     this.failStep(step);
   }
 
