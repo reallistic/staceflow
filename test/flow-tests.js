@@ -2,6 +2,8 @@
 
 import assert from 'assert';
 import sinon from 'sinon';
+
+import Constants from '../src/constants';
 import Flow from '../src/flow';
 
 describe('flow class', () => {
@@ -25,16 +27,31 @@ describe('flow class', () => {
   });
 
   describe('failCurrentStep', () => {
-    it('should add FAILED and FINISHED State and emit', () => {
+    it('should add FAILED State and emit', () => {
       let anon = sinon.stub();
       let flow = new Flow([anon]);
       let emitSpy = sinon.spy(flow, '__emit');
+      assert(!flow.isFinished());
       flow.failCurrentStep();
       assert.strictEqual(flow.__currentStep, -1);
       assert(flow.isFailed());
       assert(flow.isFinished());
-      assert(emitSpy.calledWith(Flow.StepStatus.FAILED));
-      assert(emitSpy.calledWith(Flow.StepStatus.FINISHED));
+      sinon.assert.calledWith(emitSpy, Constants.StepStatus.FAILED, null, null);
+    });
+  });
+
+  describe('failCurrentStep', () => {
+    it('should add FAILED State and emit with current step', () => {
+      let anon = sinon.stub();
+      let flow = new Flow([anon]);
+      let emitSpy = sinon.spy(flow, '__emit');
+      assert(!flow.isFinished());
+      flow.__gotoNextStep();
+      flow.failCurrentStep();
+      assert.strictEqual(flow.__currentStep, 0);
+      assert(flow.isFailed());
+      assert(flow.isFinished());
+      sinon.assert.calledWith(emitSpy, Constants.StepStatus.FAILED, null, anon);
     });
   });
 
@@ -46,7 +63,7 @@ describe('flow class', () => {
       flow.finish();
       assert.strictEqual(flow.__currentStep, -1);
       assert(flow.isFinished());
-      assert(emitSpy.calledWith(Flow.StepStatus.FINISHED));
+      sinon.assert.calledWith(emitSpy, Constants.States.FINISHED, Constants.States.FINISHED);
     });
   });
 });

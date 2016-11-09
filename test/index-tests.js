@@ -2,6 +2,7 @@
 
 import assert from 'assert';
 import sinon from 'sinon';
+import Constants from '../src/constants';
 import {Flow, CreateFlow} from '../src';
 
 
@@ -24,9 +25,11 @@ describe('CreateFlow', () => {
       sinon.assert.calledOnce(step2);
       sinon.assert.callOrder(step1, step2);
       sinon.assert.callCount(watchSpy, 4);
-      sinon.assert.neverCalledWith(watchSpy, flow, Flow.StepStatus.FAILED);
-      sinon.assert.calledWithExactly(watchSpy, flow, Flow.StepStatus.STARTED);
-      sinon.assert.calledWithExactly(watchSpy, flow, Flow.StepStatus.FINISHED);
+      sinon.assert.neverCalledWith(watchSpy, flow, Constants.StepStatus.FAILED, null);
+      sinon.assert.calledWithExactly(watchSpy, flow, Constants.StepStatus.STARTED, step1);
+      sinon.assert.calledWithExactly(watchSpy, flow, Constants.StepStatus.FINISHED, step1);
+      sinon.assert.calledWithExactly(watchSpy, flow, Constants.StepStatus.STARTED, step2);
+      sinon.assert.calledWithExactly(watchSpy, flow, Constants.StepStatus.FINISHED, step2);
     });
   });
 
