@@ -1,6 +1,6 @@
 {
   "name": "StaceFlow",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Stace is a flow control library to help facilitate sequential promise/function execution",
   "main": "lib/index.js",
   "repository": {
