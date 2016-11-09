@@ -32,5 +32,6 @@ export {
   Constants,
   CreateFlow,
   Flow,
+  Chord,
   StartFlow,
 };
