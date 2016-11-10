@@ -105,11 +105,6 @@ export default class Chord extends Base {
       return;
     }
 
-    if (!this.isFinished() && this.isLastStep()) {
-      this.finish();
-      return;
-    }
-
     if(this.hasNextStep()) {
       this.__gotoNextStep();
       // The naming here really sucks.
