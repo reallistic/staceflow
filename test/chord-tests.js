@@ -5,6 +5,7 @@ import sinon from 'sinon';
 
 import Constants from '../src/constants';
 import Chord from '../src/chord';
+import Flow from '../src/flow';
 
 
 describe('chord class', () => {
@@ -63,6 +64,35 @@ describe('chord class', () => {
       assert(!chord.isFailed());
       assert.strictEqual(chord.getState('errors').size, 1);
       assert.strictEqual(chord.getState('errors').first().msg, 'error-test');
+    });
+
+    it('should mark BaseFlow step done if it fails', () => {
+      let anon = sinon.stub();
+      let errorAnon = sinon.stub().throws({msg: 'error-flow-test'});
+      let watchSpy = sinon.stub();
+      let errorFlow = new Flow([errorAnon]);
+      errorFlow.name = 'error flow';
+
+      let chord = new Chord([anon, errorFlow, anon, anon]);
+      chord.watch(watchSpy);
+      chord.start();
+      sinon.assert.callCount(anon, 3);
+      sinon.assert.callCount(errorAnon, 1);
+
+      sinon.assert.neverCalledWith(watchSpy, chord, Constants.StepStatus.FINISHED, anon);
+      sinon.assert.calledWith(watchSpy, chord, Constants.StepStatus.STARTED, anon);
+      sinon.assert.calledWith(watchSpy, chord, Constants.StepStatus.FAILED, errorFlow);
+      sinon.assert.callCount(watchSpy, 5);
+      assert(chord.isStarted());
+      assert(!chord.isFinished());
+      assert(!chord.isFailed());
+      assert(errorFlow.isStarted());
+      assert(errorFlow.isFinished());
+      assert(errorFlow.isFailed());
+      assert.strictEqual(chord.getState('errors').size, 1);
+      assert.strictEqual(chord.getState('errors').first().msg, 'error-flow-test');
+      assert.strictEqual(chord.__doneFns.has(1), true);
+      assert.strictEqual(chord.__doneFns.size, 1);
     });
 
   });

@@ -21,7 +21,11 @@ export default class Chord extends Base {
         this.finishStep(step, stepNum);
       });
       step.on(Constants.States.FAILED, () => {
-        this.failStep(step, stepNum);
+        let error = step.getState('error');
+        if (error == null) {
+          error = step.getState('errors', `step ${step.name} failed`);
+        }
+        this.finishStep(step, stepNum, error);
       });
       // Going to the next step is safer than calling start
       // because the Flow could have already started.
