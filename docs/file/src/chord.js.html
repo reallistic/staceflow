@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/chord.js | StaceFlow</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Stace is a flow control library to help facilitate sequential promise/function execution"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="StaceFlow"><meta property="twitter:description" content="Stace is a flow control library to help facilitate sequential promise/function execution"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/reallistic/staceflow.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/base.js~Base.html">Base</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/chord.js~Chord.html">Chord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/flow.js~Flow.html">Flow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CreateFlow">CreateFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StartFlow">StartFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-States">States</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StepStatus">StepStatus</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/chord.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
+
+import Base from &apos;./base&apos;;
+import Constants from &apos;./constants&apos;;
+import Immutable from &apos;immutable&apos;;
+
+export default class Chord extends Base {
+  constructor(fns) {
+    super();
+    this.__fns = Array.prototype.slice.call(fns);
+    this.__doneFns = new Immutable.Set();
+    this.__currentFn = -1;
+    this.__changeEvent = &apos;chord-change&apos;;
+  }
+
+  __doStep(step) {
+    this.__emit(Constants.StepStatus.STARTED, null, step);
+    let stepNum = this.__currentFn;
+    if (step instanceof Base) {
+      step.on(Constants.States.FINISHED, () =&gt; {
+        this.finishStep(step, stepNum);
+      });
+      step.on(Constants.States.FAILED, () =&gt; {
+        let error = step.getState(&apos;error&apos;);
+        if (error == null) {
+          error = step.getState(&apos;errors&apos;, `step ${step.name} failed`);
+        }
+        this.finishStep(step, stepNum, error);
+      });
+      // Going to the next step is safer than calling start
+      // because the Flow could have already started.
+      step.gotoNextStep();
+    }
+    else {
+      try {
+        step(
+          this,
+          () =&gt; this.finishStep(step, stepNum),
+          (e) =&gt; this.finishStep(step, stepNum, e)
+        );
+      }
+      catch (e) {
+        this.finishStep(step, stepNum, e);
+      }
+    }
+    this.gotoNextStep();
+  }
+
+  __handleError(step, error) {
+    let errors = this.getState(&apos;errors&apos;, new Immutable.List());
+    errors = errors.push(error);
+    this.setState({errors});
+    this.failStep(step);
+  }
+
+  __gotoNextStep() {
+    if (this.hasNextStep()) {
+      this.__currentFn = this.__currentFn + 1;
+    }
+  }
+
+  addStep(step) {
+    this.__fns.push(step);
+  }
+
+  failStep(step) {
+    this.__emit(Constants.StepStatus.FAILED, null, step);
+
+    if (this.isFinished() &amp;&amp; this.getState(&apos;errors&apos;).size === this.__fns.length) {
+      this.__readyState = this.__readyState.add(
+        Constants.States.FAILED
+      );
+      this.__emit(Constants.States.FAILED, Constants.States.FAILED, step);
+    }
+  }
+
+  finishStep(step, stepNum, opt_error) {
+    if (this.__fns[stepNum] !== step) {
+      throw `Got incorrect step num &apos;${stepNum}&apos; for step`;
+    }
+    this.__doneFns = this.__doneFns.add(stepNum);
+
+    if (opt_error != null) {
+      this.__handleError(step, opt_error);
+    }
+    else {
+      this.__emit(Constants.StepStatus.FINISHED, null, step);
+    }
+
+    let isFinished = this.__fns.every((_, i) =&gt; {
+      return this.__doneFns.has(i);
+    });
+
+    if (isFinished) {
+      this.finish();
+    }
+  }
+
+  getCurrentFn() {
+    if (this.__currentFn &gt; -1 &amp;&amp; this.__currentFn &lt; this.__fns.length) {
+      return this.__fns[this.__currentFn];
+    }
+    return null;
+  }
+
+  gotoNextStep() {
+    if (!this.isStarted()) {
+      this.start();
+      return;
+    }
+
+    if(this.hasNextStep()) {
+      this.__gotoNextStep();
+      // The naming here really sucks.
+      // With a Chord there is no concept of a &quot;current function&quot; because
+      // functions could be async. This needs a better name.
+      let step = this.getCurrentFn();
+      this.__doStep(step);
+    }
+  }
+
+  hasNextStep() {
+    return (!this.isFinished() &amp;&amp;
+            !this.isLastStep() &amp;&amp;
+            this.__currentFn &lt; this.__fns.length);
+  }
+
+  isFinished() {
+    let isFinished = this.__fns.every((_, i) =&gt; {
+      return this.__doneFns.has(i);
+    });
+    return isFinished;
+  }
+
+  isLastStep() {
+    return this.__currentFn === this.__fns.length -1;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

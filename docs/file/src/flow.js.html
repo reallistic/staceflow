@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/flow.js | StaceFlow</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Stace is a flow control library to help facilitate sequential promise/function execution"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="StaceFlow"><meta property="twitter:description" content="Stace is a flow control library to help facilitate sequential promise/function execution"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/reallistic/staceflow.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/base.js~Base.html">Base</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/chord.js~Chord.html">Chord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/flow.js~Flow.html">Flow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CreateFlow">CreateFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StartFlow">StartFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-States">States</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StepStatus">StepStatus</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/flow.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
+
+import Base from &apos;./base&apos;;
+import Constants from &apos;./constants&apos;;
+
+export default class Flow extends Base {
+  constructor(steps) {
+    super();
+    this.__steps = Array.prototype.slice.call(steps);
+    this.__currentStep = -1;
+    this.__changeEvent = &apos;flow-change&apos;;
+  }
+
+  __doStep(step) {
+    if (step instanceof Base) {
+      step.on(Constants.States.FINISHED, () =&gt; {
+        this.gotoNextStep();
+      });
+      step.on(Constants.States.FAILED, () =&gt; {
+        this.failStep(step);
+      });
+    }
+    super.__doStep(step);
+  }
+
+  __gotoNextStep() {
+    if (this.hasNextStep()) {
+      this.__currentStep = this.__currentStep + 1;
+    }
+  }
+
+  addNextStep(step) {
+    if (this.getCurrentStep() != null) {
+      this.__steps.splice(this.__currentStep + 1, 0, step);
+    }
+    else {
+      throw &apos;Cannot add step at invalid state&apos;;
+    }
+  }
+
+  addStep(step) {
+    this.__steps.push(step);
+  }
+
+  failCurrentStep() {
+    let step = this.getCurrentStep();
+    this.failStep(step);
+  }
+
+  getCurrentStep() {
+    if (this.__currentStep &gt; -1 &amp;&amp; this.__currentStep &lt; this.__steps.length) {
+      return this.__steps[this.__currentStep];
+    }
+    return null;
+  }
+
+  gotoNextStep() {
+    if (!this.isStarted()) {
+      this.start();
+      return;
+    }
+
+    if (this.getCurrentStep() != null) {
+      this.__emit(Constants.StepStatus.FINISHED, null, this.getCurrentStep());
+    }
+
+    if (!this.isFinished() &amp;&amp; this.isLastStep()) {
+      this.finish();
+      return;
+    }
+
+    if(this.hasNextStep()) {
+      this.__gotoNextStep();
+      let step = this.getCurrentStep();
+      this.__doStep(step);
+    }
+  }
+
+  hasNextStep() {
+    return (!this.isFinished() &amp;&amp;
+            !this.isLastStep() &amp;&amp;
+            this.__currentStep &lt; this.__steps.length);
+  }
+
+  isFinished() {
+    if (this.__currentStep &gt;= this.__steps.length) {
+      return true;
+    }
+    return super.isFinished();
+  }
+
+  isLastStep() {
+    return this.__currentStep == this.__steps.length -1;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

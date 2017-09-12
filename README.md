@@ -1,5 +1,6 @@
 # Stace Flow
 Stace is a flow control library to help facilitate sequential promise/function execution.
+Api Reference is here: reallistic.github.io/staceflow/
 
 ![Build Status](https://circleci.com/gh/reallistic/staceflow/tree/master.svg?style=shield)
 
@@ -11,6 +12,12 @@ Stace can be used to take a collection of promises and give you back an event em
 It can also be used to facilitate composable flows such as OAuth.
 Or, it can be used to flatten out a promise.
 
+# Installation
+```
+npm install StaceFlow
+// or
+yarn add StaceFlow
+```
 
 # Examples
 ### Simple Example
