@@ -1,6 +1,6 @@
 # Stace Flow
 Stace is a flow control library to help facilitate sequential promise/function execution.
-Api Reference is here: reallistic.github.io/staceflow/
+Api Reference is here: https://reallistic.github.io/staceflow/
 
 ![Build Status](https://circleci.com/gh/reallistic/staceflow/tree/master.svg?style=shield)
 
