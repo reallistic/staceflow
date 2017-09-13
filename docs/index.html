@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | StaceFlow</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Stace is a flow control library to help facilitate sequential promise/function execution"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="StaceFlow"><meta property="twitter:description" content="Stace is a flow control library to help facilitate sequential promise/function execution"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/reallistic/staceflow.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/base.js~Base.html">Base</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/chord.js~Chord.html">Chord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/flow.js~Flow.html">Flow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CreateFlow">CreateFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StartFlow">StartFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-States">States</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StepStatus">StepStatus</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="stace-flow">Stace Flow</h1><p>Stace is a flow control library to help facilitate sequential promise/function execution.</p>
+<p><img src="https://circleci.com/gh/reallistic/staceflow/tree/master.svg?style=shield" alt="Build Status"></p>
+<h1 id="rationale">Rationale</h1><p>Normally when working in frameworks like React, EventEmitters and state are used to facilitate business logic throughout the lifecycle of components and flux-like libraries.
+This library seeks to bring that functionality and more to any and all facets of Javascript.
+Stace can be used to take a collection of promises and give you back an event emitter.
+It can also be used to facilitate composable flows such as OAuth.
+Or, it can be used to flatten out a promise.</p>
+<h1 id="examples">Examples</h1><h3 id="simple-example">Simple Example</h3><p>Without Stace:</p>
+<pre><code><code class="source-code prettyprint">function foo() {
+    return service1.foo().then(data =&gt; {
+        return service2.foo(data.param).then(moreData =&gt; {
+            return service3.foo(data.param2, moreData.parm).then(() =&gt; data);
+        });
+    });
+}</code>
+</code></pre><p>With Stace:</p>
+<pre><code><code class="source-code prettyprint">import { StartFlow, Constants } from &apos;StaceFlow&apos;;
+
+function dataRetreiver(id) {
+    let flow = CreateFlow(
+        flow =&gt; {
+            service1.foo().then(data =&gt; {
+                flow.setState({data});
+                flow.gotoNextStep();
+            },
+            error =&gt; {
+                flow.setState({error});
+                flow.failCurrentStep();
+            });
+        },
+        flow =&gt; {
+            service2.foo(flow.getState(&apos;data&apos;).param).then(moreData =&gt; {
+                flow.setState({moreData});
+                flow.gotoNextStep();
+            },
+            error =&gt; {
+                flow.setState({error});
+                flow.failCurrentStep();
+            });
+        },
+        flow =&gt; {
+            let data = flow.getState(&apos;data&apos;);
+            let moreData = flow.getState(&apos;moreData&apos;);
+            service3.foo(data.param2, moreData.param).then(() =&gt; {
+                flow.gotoNextStep();
+            },
+            error =&gt; {
+                flow.setState({error});
+                flow.failCurrentStep();
+            });
+        });
+    return new Promise((resolve, reject) =&gt; {
+        flow.on(Constants.States.FINISHED, () =&gt; resolve(flow.getState(&apos;data&apos;)));
+        flow.on(Constants.States.FAILED, (step) =&gt; reject(flow.getState(&apos;error&apos;)));
+        flow.start();
+    });
+}</code>
+</code></pre><p>Thats not very helpful. We just added more code....</p>
+<h3 id="composing-flows">Composing flows</h3><p>But then again what if we need to know which step failed?</p>
+<pre><code><code class="source-code prettyprint">function callService1(flow) {
+    service1.foo().then(data =&gt; {
+        flow.setState({data});
+        flow.gotoNextStep();
+    },
+    error =&gt; {
+        flow.setState({error});
+        flow.failCurrentStep();
+    });
+}
+
+
+function callService2(flow) {
+    service2.foo(flow.getState(&apos;data&apos;).param).then(moreData =&gt; {
+        flow.setState({moreData});
+        flow.gotoNextStep();
+    },
+    error =&gt; {
+        flow.setState({error});
+        flow.failCurrentStep();
+    });
+}
+
+
+function callService3(flow) {
+    let data = flow.getState(&apos;data&apos;);
+    let moreData = flow.getState(&apos;moreData&apos;);
+    service3.foo(data.param2, moreData.param).then(() =&gt; {
+        flow.gotoNextStep();
+    },
+    error =&gt; {
+        flow.setState({error});
+        flow.failCurrentStep();
+    });
+}
+
+
+function dataRetreiver(id) {
+    let flow = CreateFlow(
+        callService1,
+        callService2,
+        callService3
+    );
+    return new Promise((resolve, reject) =&gt; {
+        flow.on(Constants.States.FINISHED, () =&gt; resolve(flow.getState(&apos;data&apos;)));
+        flow.on(Constants.States.FAILED, (step) =&gt; {
+            if (step === callService3) {
+                console.error(&apos;someone should check out service3&apos;, flow.getState(&apos;error&apos;));
+                resolve(flow.getState(&apos;data&apos;));
+            }
+            else {
+                reject(flow.getState(&apos;error&apos;))
+            }
+        });
+        flow.start();
+    });
+}</code>
+</code></pre><p>Thats a little more useful.</p>
+<h4 id="reusing-flows">Reusing flows</h4><p>Sometimes, all of them need not be called:</p>
+<pre><code><code class="source-code prettyprint">const Flow1 = [callService1, callService3];
+const Flow2 = [callService1, callService2, callService3];
+
+function dataRetreiver(opt_knownData) {
+    let flow;
+    if (opt_knownData) {
+        flow = CreateFlow.apply(null, Flow1);
+        flow.setState({moreData: opt_knownData});
+    }
+    else {
+        flow = CreateFlow.apply(null, Flow2);
+    }
+    flow.start();
+    return flow;
+}</code>
+</code></pre><h4 id="adding-steps">Adding steps</h4><p>You can also add steps after the current one if needed:</p>
+<pre><code><code class="source-code prettyprint">function assertUser(flow) {
+    if (flow.getState(&apos;authenticated&apos;)) {
+        flow.gotoNextStep();
+    }
+    else {
+        flow.addNextStep(authenticateUser);
+        flow.gotoNextStep();
+    }
+}</code>
+</code></pre><p>or at the end of the flow:</p>
+<pre><code><code class="source-code prettyprint">function parseData(flow) {
+    if (detectAnomaly(flow.getState(&apos;data&apos;))) {
+        flow.addStep(logResult);
+    }
+}</code>
+</code></pre></div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

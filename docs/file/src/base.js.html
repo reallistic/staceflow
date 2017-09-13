@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/base.js | StaceFlow</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Stace is a flow control library to help facilitate sequential promise/function execution"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="StaceFlow"><meta property="twitter:description" content="Stace is a flow control library to help facilitate sequential promise/function execution"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/reallistic/staceflow.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/base.js~Base.html">Base</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/chord.js~Chord.html">Chord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/flow.js~Flow.html">Flow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CreateFlow">CreateFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-StartFlow">StartFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-States">States</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-StepStatus">StepStatus</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/base.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
+
+import Constants from &apos;./constants&apos;;
+import Immutable from &apos;immutable&apos;;
+import {EventEmitter} from &apos;fbemitter&apos;;
+
+export default class Base extends EventEmitter {
+  constructor() {
+    super();
+    this.__parentFlow = null;
+    this.__autoLink = false;
+    this.__state = new Immutable.Map();
+    this.__readyState = new Immutable.Set();
+    this.__changeEvent = &apos;change&apos;;
+  }
+
+  __doStep(step) {
+    this.__emit(Constants.StepStatus.STARTED, this.__changeEvent, step);
+    if (step instanceof Base) {
+      // Going to the next step is safer than calling start
+      // because the Flow could have already started.
+      if (this.__autoLink) {
+        step.linkToParentState(this);
+      }
+      step.gotoNextStep();
+    }
+    else {
+      try {
+        step(this);
+      }
+      catch (e) {
+        this.__handleError(step, e);
+      }
+    }
+  }
+
+  __emit(stepStatus, opt_event, opt_step) {
+    if (opt_event == null) {
+      opt_event = this.__changeEvent;
+    }
+    this.emit(opt_event, this, stepStatus, opt_step);
+  }
+
+  __handleError(step, error) {
+    this.setState({&apos;error&apos;: error});
+    this.failStep(step);
+  }
+
+  autoLinkChildFlows(enabled) {
+    this.__autoLink = enabled;
+  }
+
+  failStep(step) {
+    this.__readyState = this.__readyState.add(
+      Constants.States.FAILED
+    );
+    this.__emit(Constants.States.FAILED, Constants.States.FAILED, step);
+    this.__emit(Constants.StepStatus.FAILED, null, step);
+  }
+
+  finish() {
+    this.__readyState = this.__readyState.add(
+      Constants.States.FINISHED
+    );
+    this.__emit(Constants.States.FINISHED, Constants.States.FINISHED);
+  }
+
+  getState(opt_key, opt_value) {
+    if (this.__parentFlow != null) {
+      return this.__parentFlow.getState(opt_key, opt_value);
+    }
+    if (opt_key != null) {
+      return this.__state.get(opt_key, opt_value);
+    }
+    return this.__state;
+  }
+
+  gotoNextStep() {
+    throw &apos;Not Implemented&apos;;
+  }
+
+  isFailed() {
+    return this.__readyState.has(Constants.States.FAILED);
+  }
+
+  isFinished() {
+    return (this.__readyState.has(Constants.States.FINISHED) ||
+            this.__readyState.has(Constants.States.FAILED));
+  }
+
+  isStarted() {
+    return this.__readyState.has(Constants.States.STARTED);
+  }
+
+  linkToParentState(parentFlow) {
+    if (!(parentFlow instanceof Base)) {
+      throw &apos;Expected flow object&apos;;
+    }
+
+    this.__parentFlow = parentFlow;
+  }
+
+  on(event, cb) {
+    return this.addListener(event, cb);
+  }
+
+  onOnce(event, cb) {
+    return this.once(event, cb);
+  }
+
+  setState(nextState) {
+    if (this.__parentFlow != null) {
+      return this.__parentFlow.setState(nextState);
+    }
+    // Do a manual soft merge to prevent array&apos;s and objects
+    // from being converted to immutable List&apos;s and Maps
+    Object.keys(nextState).forEach(key =&gt; {
+      this.__state = this.__state.set(key, nextState[key]);
+    });
+  }
+
+  start() {
+    this.__readyState = this.__readyState.add(
+      Constants.States.STARTED
+    );
+    this.__emit(Constants.States.STARTED, Constants.States.STARTED);
+    this.gotoNextStep();
+  }
+
+  watch(cb) {
+    return this.addListener(this.__changeEvent, cb);
+  }
+
+  watchOnce(cb) {
+    return this.once(this.__changeEvent, cb);
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

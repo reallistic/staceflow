@@ -1,0 +1,2009 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/base.js",
+    "content": "'use strict';\n\nimport Constants from './constants';\nimport Immutable from 'immutable';\nimport {EventEmitter} from 'fbemitter';\n\nexport default class Base extends EventEmitter {\n  constructor() {\n    super();\n    this.__parentFlow = null;\n    this.__autoLink = false;\n    this.__state = new Immutable.Map();\n    this.__readyState = new Immutable.Set();\n    this.__changeEvent = 'change';\n  }\n\n  __doStep(step) {\n    this.__emit(Constants.StepStatus.STARTED, this.__changeEvent, step);\n    if (step instanceof Base) {\n      // Going to the next step is safer than calling start\n      // because the Flow could have already started.\n      if (this.__autoLink) {\n        step.linkToParentState(this);\n      }\n      step.gotoNextStep();\n    }\n    else {\n      try {\n        step(this);\n      }\n      catch (e) {\n        this.__handleError(step, e);\n      }\n    }\n  }\n\n  __emit(stepStatus, opt_event, opt_step) {\n    if (opt_event == null) {\n      opt_event = this.__changeEvent;\n    }\n    this.emit(opt_event, this, stepStatus, opt_step);\n  }\n\n  __handleError(step, error) {\n    this.setState({'error': error});\n    this.failStep(step);\n  }\n\n  autoLinkChildFlows(enabled) {\n    this.__autoLink = enabled;\n  }\n\n  failStep(step) {\n    this.__readyState = this.__readyState.add(\n      Constants.States.FAILED\n    );\n    this.__emit(Constants.States.FAILED, Constants.States.FAILED, step);\n    this.__emit(Constants.StepStatus.FAILED, null, step);\n  }\n\n  finish() {\n    this.__readyState = this.__readyState.add(\n      Constants.States.FINISHED\n    );\n    this.__emit(Constants.States.FINISHED, Constants.States.FINISHED);\n  }\n\n  getState(opt_key, opt_value) {\n    if (this.__parentFlow != null) {\n      return this.__parentFlow.getState(opt_key, opt_value);\n    }\n    if (opt_key != null) {\n      return this.__state.get(opt_key, opt_value);\n    }\n    return this.__state;\n  }\n\n  gotoNextStep() {\n    throw 'Not Implemented';\n  }\n\n  isFailed() {\n    return this.__readyState.has(Constants.States.FAILED);\n  }\n\n  isFinished() {\n    return (this.__readyState.has(Constants.States.FINISHED) ||\n            this.__readyState.has(Constants.States.FAILED));\n  }\n\n  isStarted() {\n    return this.__readyState.has(Constants.States.STARTED);\n  }\n\n  linkToParentState(parentFlow) {\n    if (!(parentFlow instanceof Base)) {\n      throw 'Expected flow object';\n    }\n\n    this.__parentFlow = parentFlow;\n  }\n\n  on(event, cb) {\n    return this.addListener(event, cb);\n  }\n\n  onOnce(event, cb) {\n    return this.once(event, cb);\n  }\n\n  setState(nextState) {\n    if (this.__parentFlow != null) {\n      return this.__parentFlow.setState(nextState);\n    }\n    // Do a manual soft merge to prevent array's and objects\n    // from being converted to immutable List's and Maps\n    Object.keys(nextState).forEach(key => {\n      this.__state = this.__state.set(key, nextState[key]);\n    });\n  }\n\n  start() {\n    this.__readyState = this.__readyState.add(\n      Constants.States.STARTED\n    );\n    this.__emit(Constants.States.STARTED, Constants.States.STARTED);\n    this.gotoNextStep();\n  }\n\n  watch(cb) {\n    return this.addListener(this.__changeEvent, cb);\n  }\n\n  watchOnce(cb) {\n    return this.once(this.__changeEvent, cb);\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/src/base.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Base",
+    "memberof": "src/base.js",
+    "static": true,
+    "longname": "src/base.js~Base",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/base.js",
+    "importStyle": "Base",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "fbemitter~EventEmitter"
+    ]
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "__parentFlow",
+    "memberof": "src/base.js~Base",
+    "static": false,
+    "longname": "src/base.js~Base#__parentFlow",
+    "access": "private",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "__autoLink",
+    "memberof": "src/base.js~Base",
+    "static": false,
+    "longname": "src/base.js~Base#__autoLink",
+    "access": "private",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "__state",
+    "memberof": "src/base.js~Base",
+    "static": false,
+    "longname": "src/base.js~Base#__state",
+    "access": "private",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "member",
+    "name": "__readyState",
+    "memberof": "src/base.js~Base",
+    "static": false,
+    "longname": "src/base.js~Base#__readyState",
+    "access": "private",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "__changeEvent",
+    "memberof": "src/base.js~Base",
+    "static": false,
+    "longname": "src/base.js~Base#__changeEvent",
+    "access": "private",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "__doStep",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#__doStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "__emit",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#__emit",
+    "access": "private",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [
+      {
+        "name": "stepStatus",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "opt_event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "opt_step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "__handleError",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#__handleError",
+    "access": "private",
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "autoLinkChildFlows",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#autoLinkChildFlows",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "params": [
+      {
+        "name": "enabled",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "failStep",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#failStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "finish",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#finish",
+    "access": "public",
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "getState",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#getState",
+    "access": "public",
+    "description": null,
+    "lineNumber": 68,
+    "undocument": true,
+    "params": [
+      {
+        "name": "opt_key",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "opt_value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "gotoNextStep",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#gotoNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "isFailed",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#isFailed",
+    "access": "public",
+    "description": null,
+    "lineNumber": 82,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "isFinished",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#isFinished",
+    "access": "public",
+    "description": null,
+    "lineNumber": 86,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "isStarted",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#isStarted",
+    "access": "public",
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "linkToParentState",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#linkToParentState",
+    "access": "public",
+    "description": null,
+    "lineNumber": 95,
+    "undocument": true,
+    "params": [
+      {
+        "name": "parentFlow",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "on",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#on",
+    "access": "public",
+    "description": null,
+    "lineNumber": 103,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "cb",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "onOnce",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#onOnce",
+    "access": "public",
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "cb",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "setState",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#setState",
+    "access": "public",
+    "description": null,
+    "lineNumber": 111,
+    "undocument": true,
+    "params": [
+      {
+        "name": "nextState",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "start",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#start",
+    "access": "public",
+    "description": null,
+    "lineNumber": 122,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "watch",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#watch",
+    "access": "public",
+    "description": null,
+    "lineNumber": 130,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cb",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "watchOnce",
+    "memberof": "src/base.js~Base",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/base.js~Base#watchOnce",
+    "access": "public",
+    "description": null,
+    "lineNumber": 134,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cb",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/chord.js",
+    "content": "'use strict';\n\nimport Base from './base';\nimport Constants from './constants';\nimport Immutable from 'immutable';\n\nexport default class Chord extends Base {\n  constructor(fns) {\n    super();\n    this.__fns = Array.prototype.slice.call(fns);\n    this.__doneFns = new Immutable.Set();\n    this.__currentFn = -1;\n    this.__changeEvent = 'chord-change';\n  }\n\n  __doStep(step) {\n    this.__emit(Constants.StepStatus.STARTED, null, step);\n    let stepNum = this.__currentFn;\n    if (step instanceof Base) {\n      step.on(Constants.States.FINISHED, () => {\n        this.finishStep(step, stepNum);\n      });\n      step.on(Constants.States.FAILED, () => {\n        let error = step.getState('error');\n        if (error == null) {\n          error = step.getState('errors', `step ${step.name} failed`);\n        }\n        this.finishStep(step, stepNum, error);\n      });\n      // Going to the next step is safer than calling start\n      // because the Flow could have already started.\n      step.gotoNextStep();\n    }\n    else {\n      try {\n        step(\n          this,\n          () => this.finishStep(step, stepNum),\n          (e) => this.finishStep(step, stepNum, e)\n        );\n      }\n      catch (e) {\n        this.finishStep(step, stepNum, e);\n      }\n    }\n    this.gotoNextStep();\n  }\n\n  __handleError(step, error) {\n    let errors = this.getState('errors', new Immutable.List());\n    errors = errors.push(error);\n    this.setState({errors});\n    this.failStep(step);\n  }\n\n  __gotoNextStep() {\n    if (this.hasNextStep()) {\n      this.__currentFn = this.__currentFn + 1;\n    }\n  }\n\n  addStep(step) {\n    this.__fns.push(step);\n  }\n\n  failStep(step) {\n    this.__emit(Constants.StepStatus.FAILED, null, step);\n\n    if (this.isFinished() && this.getState('errors').size === this.__fns.length) {\n      this.__readyState = this.__readyState.add(\n        Constants.States.FAILED\n      );\n      this.__emit(Constants.States.FAILED, Constants.States.FAILED, step);\n    }\n  }\n\n  finishStep(step, stepNum, opt_error) {\n    if (this.__fns[stepNum] !== step) {\n      throw `Got incorrect step num '${stepNum}' for step`;\n    }\n    this.__doneFns = this.__doneFns.add(stepNum);\n\n    if (opt_error != null) {\n      this.__handleError(step, opt_error);\n    }\n    else {\n      this.__emit(Constants.StepStatus.FINISHED, null, step);\n    }\n\n    let isFinished = this.__fns.every((_, i) => {\n      return this.__doneFns.has(i);\n    });\n\n    if (isFinished) {\n      this.finish();\n    }\n  }\n\n  getCurrentFn() {\n    if (this.__currentFn > -1 && this.__currentFn < this.__fns.length) {\n      return this.__fns[this.__currentFn];\n    }\n    return null;\n  }\n\n  gotoNextStep() {\n    if (!this.isStarted()) {\n      this.start();\n      return;\n    }\n\n    if(this.hasNextStep()) {\n      this.__gotoNextStep();\n      // The naming here really sucks.\n      // With a Chord there is no concept of a \"current function\" because\n      // functions could be async. This needs a better name.\n      let step = this.getCurrentFn();\n      this.__doStep(step);\n    }\n  }\n\n  hasNextStep() {\n    return (!this.isFinished() &&\n            !this.isLastStep() &&\n            this.__currentFn < this.__fns.length);\n  }\n\n  isFinished() {\n    let isFinished = this.__fns.every((_, i) => {\n      return this.__doneFns.has(i);\n    });\n    return isFinished;\n  }\n\n  isLastStep() {\n    return this.__currentFn === this.__fns.length -1;\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/src/chord.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "class",
+    "name": "Chord",
+    "memberof": "src/chord.js",
+    "static": true,
+    "longname": "src/chord.js~Chord",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/chord.js",
+    "importStyle": "Chord",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/base.js~Base"
+    ]
+  },
+  {
+    "__docId__": 82,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "member",
+    "name": "__fns",
+    "memberof": "src/chord.js~Chord",
+    "static": false,
+    "longname": "src/chord.js~Chord#__fns",
+    "access": "private",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "__doneFns",
+    "memberof": "src/chord.js~Chord",
+    "static": false,
+    "longname": "src/chord.js~Chord#__doneFns",
+    "access": "private",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "member",
+    "name": "__currentFn",
+    "memberof": "src/chord.js~Chord",
+    "static": false,
+    "longname": "src/chord.js~Chord#__currentFn",
+    "access": "private",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "__changeEvent",
+    "memberof": "src/chord.js~Chord",
+    "static": false,
+    "longname": "src/chord.js~Chord#__changeEvent",
+    "access": "private",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "__doStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#__doStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "__handleError",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#__handleError",
+    "access": "private",
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "__gotoNextStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#__gotoNextStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "addStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#addStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "name": "failStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#failStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "__readyState",
+    "memberof": "src/chord.js~Chord",
+    "static": false,
+    "longname": "src/chord.js~Chord#__readyState",
+    "access": "private",
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "finishStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#finishStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 77,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "stepNum",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "opt_error",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "getCurrentFn",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#getCurrentFn",
+    "access": "public",
+    "description": null,
+    "lineNumber": 99,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "method",
+    "name": "gotoNextStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#gotoNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 106,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "hasNextStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#hasNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 122,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "isFinished",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#isFinished",
+    "access": "public",
+    "description": null,
+    "lineNumber": 128,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "isLastStep",
+    "memberof": "src/chord.js~Chord",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/chord.js~Chord#isLastStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 135,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "file",
+    "name": "src/constants.js",
+    "content": "'use strict';\n\nexport const StepStatus = {\n  STARTED: 'step-started',\n  FINISHED: 'step-finished',\n  FAILED: 'step-failed'\n};\n\nexport const States = {\n  STARTED: 'flow-started',\n  FINISHED: 'flow-finished',\n  FAILED: 'flow-failed'\n};\n\nexport default {\n  StepStatus,\n  States,\n};\n",
+    "static": true,
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/src/constants.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "name": "StepStatus",
+    "memberof": "src/constants.js",
+    "static": true,
+    "longname": "src/constants.js~StepStatus",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/constants.js",
+    "importStyle": "{StepStatus}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"STARTED\": string, \"FINISHED\": string, \"FAILED\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "variable",
+    "name": "States",
+    "memberof": "src/constants.js",
+    "static": true,
+    "longname": "src/constants.js~States",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/constants.js",
+    "importStyle": "{States}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"STARTED\": string, \"FINISHED\": string, \"FAILED\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "file",
+    "name": "src/flow.js",
+    "content": "'use strict';\n\nimport Base from './base';\nimport Constants from './constants';\n\nexport default class Flow extends Base {\n  constructor(steps) {\n    super();\n    this.__steps = Array.prototype.slice.call(steps);\n    this.__currentStep = -1;\n    this.__changeEvent = 'flow-change';\n  }\n\n  __doStep(step) {\n    if (step instanceof Base) {\n      step.on(Constants.States.FINISHED, () => {\n        this.gotoNextStep();\n      });\n      step.on(Constants.States.FAILED, () => {\n        this.failStep(step);\n      });\n    }\n    super.__doStep(step);\n  }\n\n  __gotoNextStep() {\n    if (this.hasNextStep()) {\n      this.__currentStep = this.__currentStep + 1;\n    }\n  }\n\n  addNextStep(step) {\n    if (this.getCurrentStep() != null) {\n      this.__steps.splice(this.__currentStep + 1, 0, step);\n    }\n    else {\n      throw 'Cannot add step at invalid state';\n    }\n  }\n\n  addStep(step) {\n    this.__steps.push(step);\n  }\n\n  failCurrentStep() {\n    let step = this.getCurrentStep();\n    this.failStep(step);\n  }\n\n  getCurrentStep() {\n    if (this.__currentStep > -1 && this.__currentStep < this.__steps.length) {\n      return this.__steps[this.__currentStep];\n    }\n    return null;\n  }\n\n  gotoNextStep() {\n    if (!this.isStarted()) {\n      this.start();\n      return;\n    }\n\n    if (this.getCurrentStep() != null) {\n      this.__emit(Constants.StepStatus.FINISHED, null, this.getCurrentStep());\n    }\n\n    if (!this.isFinished() && this.isLastStep()) {\n      this.finish();\n      return;\n    }\n\n    if(this.hasNextStep()) {\n      this.__gotoNextStep();\n      let step = this.getCurrentStep();\n      this.__doStep(step);\n    }\n  }\n\n  hasNextStep() {\n    return (!this.isFinished() &&\n            !this.isLastStep() &&\n            this.__currentStep < this.__steps.length);\n  }\n\n  isFinished() {\n    if (this.__currentStep >= this.__steps.length) {\n      return true;\n    }\n    return super.isFinished();\n  }\n\n  isLastStep() {\n    return this.__currentStep == this.__steps.length -1;\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/src/flow.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
+    "kind": "class",
+    "name": "Flow",
+    "memberof": "src/flow.js",
+    "static": true,
+    "longname": "src/flow.js~Flow",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/flow.js",
+    "importStyle": "Flow",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/base.js~Base"
+    ]
+  },
+  {
+    "__docId__": 106,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "member",
+    "name": "__steps",
+    "memberof": "src/flow.js~Flow",
+    "static": false,
+    "longname": "src/flow.js~Flow#__steps",
+    "access": "private",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "member",
+    "name": "__currentStep",
+    "memberof": "src/flow.js~Flow",
+    "static": false,
+    "longname": "src/flow.js~Flow#__currentStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "name": "__changeEvent",
+    "memberof": "src/flow.js~Flow",
+    "static": false,
+    "longname": "src/flow.js~Flow#__changeEvent",
+    "access": "private",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "method",
+    "name": "__doStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#__doStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 111,
+    "kind": "method",
+    "name": "__gotoNextStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#__gotoNextStep",
+    "access": "private",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 113,
+    "kind": "method",
+    "name": "addNextStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#addNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "addStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#addStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "params": [
+      {
+        "name": "step",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "failCurrentStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#failCurrentStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "getCurrentStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#getCurrentStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "gotoNextStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#gotoNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 57,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "hasNextStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#hasNextStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "method",
+    "name": "isFinished",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#isFinished",
+    "access": "public",
+    "description": null,
+    "lineNumber": 85,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "isLastStep",
+    "memberof": "src/flow.js~Flow",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/flow.js~Flow#isLastStep",
+    "access": "public",
+    "description": null,
+    "lineNumber": 92,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "'use strict';\n\nimport Constants from './constants';\nimport Flow from './flow';\nimport Chord from './chord';\n\nfunction CreateChord(...var_args) {\n  return new Chord(var_args);\n}\n\nfunction StartChord(...var_args) {\n  let chord = new Chord(var_args);\n  setTimeout(() => {\n    chord.start();\n  }, 1);\n  return chord;\n}\n\nfunction CreateFlow(...var_args) {\n  return new Flow(var_args);\n}\n\nfunction StartFlow(...var_args) {\n  let flow = new Flow(var_args);\n  setTimeout(() => {\n    flow.start();\n  }, 1);\n  return flow;\n}\n\nexport {\n  Constants,\n  CreateFlow,\n  Flow,\n  Chord,\n  StartFlow,\n};\n",
+    "static": true,
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 122,
+    "kind": "function",
+    "name": "CreateChord",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~CreateChord",
+    "access": "public",
+    "export": false,
+    "importPath": "StaceFlow/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "var_args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "function",
+    "name": "StartChord",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~StartChord",
+    "access": "public",
+    "export": false,
+    "importPath": "StaceFlow/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "var_args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "function",
+    "name": "CreateFlow",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~CreateFlow",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/index.js",
+    "importStyle": "{CreateFlow}",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [
+      {
+        "name": "var_args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "function",
+    "name": "StartFlow",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~StartFlow",
+    "access": "public",
+    "export": true,
+    "importPath": "StaceFlow/src/index.js",
+    "importStyle": "{StartFlow}",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "var_args",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# Stace Flow\nStace is a flow control library to help facilitate sequential promise/function execution.\n\n![Build Status](https://circleci.com/gh/reallistic/staceflow/tree/master.svg?style=shield)\n\n\n# Rationale\nNormally when working in frameworks like React, EventEmitters and state are used to facilitate business logic throughout the lifecycle of components and flux-like libraries.\nThis library seeks to bring that functionality and more to any and all facets of Javascript.\nStace can be used to take a collection of promises and give you back an event emitter.\nIt can also be used to facilitate composable flows such as OAuth.\nOr, it can be used to flatten out a promise.\n\n\n# Examples\n### Simple Example\nWithout Stace:\n```\nfunction foo() {\n    return service1.foo().then(data => {\n        return service2.foo(data.param).then(moreData => {\n            return service3.foo(data.param2, moreData.parm).then(() => data);\n        });\n    });\n}\n```\nWith Stace:\n```\nimport { StartFlow, Constants } from 'StaceFlow';\n\nfunction dataRetreiver(id) {\n    let flow = CreateFlow(\n        flow => {\n            service1.foo().then(data => {\n                flow.setState({data});\n                flow.gotoNextStep();\n            },\n            error => {\n                flow.setState({error});\n                flow.failCurrentStep();\n            });\n        },\n        flow => {\n            service2.foo(flow.getState('data').param).then(moreData => {\n                flow.setState({moreData});\n                flow.gotoNextStep();\n            },\n            error => {\n                flow.setState({error});\n                flow.failCurrentStep();\n            });\n        },\n        flow => {\n            let data = flow.getState('data');\n            let moreData = flow.getState('moreData');\n            service3.foo(data.param2, moreData.param).then(() => {\n                flow.gotoNextStep();\n            },\n            error => {\n                flow.setState({error});\n                flow.failCurrentStep();\n            });\n        });\n    return new Promise((resolve, reject) => {\n        flow.on(Constants.States.FINISHED, () => resolve(flow.getState('data')));\n        flow.on(Constants.States.FAILED, (step) => reject(flow.getState('error')));\n        flow.start();\n    });\n}\n```\nThats not very helpful. We just added more code....\n\n### Composing flows\nBut then again what if we need to know which step failed?\n```\nfunction callService1(flow) {\n    service1.foo().then(data => {\n        flow.setState({data});\n        flow.gotoNextStep();\n    },\n    error => {\n        flow.setState({error});\n        flow.failCurrentStep();\n    });\n}\n\n\nfunction callService2(flow) {\n    service2.foo(flow.getState('data').param).then(moreData => {\n        flow.setState({moreData});\n        flow.gotoNextStep();\n    },\n    error => {\n        flow.setState({error});\n        flow.failCurrentStep();\n    });\n}\n\n\nfunction callService3(flow) {\n    let data = flow.getState('data');\n    let moreData = flow.getState('moreData');\n    service3.foo(data.param2, moreData.param).then(() => {\n        flow.gotoNextStep();\n    },\n    error => {\n        flow.setState({error});\n        flow.failCurrentStep();\n    });\n}\n\n\nfunction dataRetreiver(id) {\n    let flow = CreateFlow(\n        callService1,\n        callService2,\n        callService3\n    );\n    return new Promise((resolve, reject) => {\n        flow.on(Constants.States.FINISHED, () => resolve(flow.getState('data')));\n        flow.on(Constants.States.FAILED, (step) => {\n            if (step === callService3) {\n                console.error('someone should check out service3', flow.getState('error'));\n                resolve(flow.getState('data'));\n            }\n            else {\n                reject(flow.getState('error'))\n            }\n        });\n        flow.start();\n    });\n}\n```\nThats a little more useful.\n\n#### Reusing flows\nSometimes, all of them need not be called:\n\n```\nconst Flow1 = [callService1, callService3];\nconst Flow2 = [callService1, callService2, callService3];\n\nfunction dataRetreiver(opt_knownData) {\n    let flow;\n    if (opt_knownData) {\n        flow = CreateFlow.apply(null, Flow1);\n        flow.setState({moreData: opt_knownData});\n    }\n    else {\n        flow = CreateFlow.apply(null, Flow2);\n    }\n    flow.start();\n    return flow;\n}\n```\n#### Adding steps\nYou can also add steps after the current one if needed:\n```\nfunction assertUser(flow) {\n    if (flow.getState('authenticated')) {\n        flow.gotoNextStep();\n    }\n    else {\n        flow.addNextStep(authenticateUser);\n        flow.gotoNextStep();\n    }\n}\n```\n\nor at the end of the flow:\n```\nfunction parseData(flow) {\n    if (detectAnomaly(flow.getState('data'))) {\n        flow.addStep(logResult);\n    }\n}\n```\n",
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"StaceFlow\",\n  \"version\": \"0.0.10\",\n  \"description\": \"Stace is a flow control library to help facilitate sequential promise/function execution\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"url\": \"https://github.com/reallistic/staceflow.git\",\n    \"type\": \"git\"\n  },\n  \"scripts\": {\n    \"test\": \"mocha --compilers js:babel-core/register --recursive test/ \",\n    \"testAndReport\": \"mocha --compilers js:babel-core/register --recursive --reporter  mocha-junit-reporter test/\",\n    \"testAndCover\": \"mocha --compilers js:babel-core/register --recursive --reporter xunit test/ > test-reports.xml && istanbul cover node_modules/mocha/bin/_mocha -- --recursive\",\n    \"prepublish\": \"babel --presets=es2015 src --out-dir lib\",\n    \"esdoc\": \"esdoc\"\n  },\n  \"author\": \"Michael Chase <reallistic@rosekings.com>\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"fbemitter\": \"^2.1.1\",\n    \"immutable\": \"^3.8.1\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.18.0\",\n    \"babel-core\": \"^6.18.2\",\n    \"babel-preset-es2015\": \"^6.18.0\",\n    \"esdoc\": \"^1.0.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"istanbul\": \"^0.4.5\",\n    \"mocha\": \"^3.1.2\",\n    \"mocha-istanbul\": \"^0.3.0\",\n    \"mocha-junit-reporter\": \"^1.12.1\",\n    \"sinon\": \"^1.17.6\"\n  }\n}\n",
+    "longname": "/Users/mchase/workspace/ancestry/acis/stace/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
